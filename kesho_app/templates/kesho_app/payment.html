@@ -1,0 +1,48 @@
+<!--inherting from another file-->
+{% extends 'kesho_app/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <from action="" method="POST">
+
+        <h1>
+            Add Payments Form
+        </h1>
+<br>
+{% csrf_token %}
+{{ getpaymentform | crispy}}
+
+<button type='submit' class = 'btn btn-primary'>Submit</button>
+
+    </form>
+</div>
+
+
+<!--everything about html and other things must be with this space-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
